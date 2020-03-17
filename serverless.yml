@@ -10,6 +10,7 @@ custom:
       - VCS
       - REPO_OWNER
       - REPO_NAME
+      - RANDOM_SECRET
 
 provider:
   name: aws

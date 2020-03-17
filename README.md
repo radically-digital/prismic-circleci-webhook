@@ -6,7 +6,7 @@ Triggers a build in circleci when the lambda receives a post request.
 
 Post request to lambda API
 
-`curl -X POST <lambda-api>/trigger?branch=<branch-other-than-master>`
+`curl -X POST <lambda-api>/trigger`
 
 ## Setup
 

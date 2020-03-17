@@ -4,18 +4,11 @@ const {
   DEFAULT_BRANCH,
   VCS,
   REPO_OWNER,
-  REPO_NAME,
-  RANDOM_SECRET
+  REPO_NAME
 } = process.env;
 
-module.exports.trigger = async event => {
-  const { branch } = JSON.parse(event.params);
-  const { secret } = JSON.parse(event.body);
-  const body = JSON.stringify({ branch: branch || DEFAULT_BRANCH });
-
-  if (`${secret}` !== `${RANDOM_SECRET}`) {
-    return { statusCode: 401, body: "I need the secret" };
-  }
+module.exports.trigger = async () => {
+  const body = JSON.stringify({ branch: DEFAULT_BRANCH });
 
   try {
     const response = await got.post(
