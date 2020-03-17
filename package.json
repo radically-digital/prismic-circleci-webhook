@@ -1,0 +1,22 @@
+{
+  "name": "prismic-circleci-webhook",
+  "version": "1.0.0",
+  "description": "Triggers a build in circleci when the lambda receives a post request.",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "npm run sls -- deploy --verbose",
+    "sls": "serverless"
+  },
+  "keywords": [],
+  "author": "github.com/olmesm",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^1.19.1",
+    "serverless": "^1.66.0",
+    "xo": "^0.28.0"
+  },
+  "dependencies": {
+    "got": "^10.6.0",
+    "serverless-dotenv-plugin": "^2.3.2"
+  }
+}

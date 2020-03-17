@@ -1,0 +1,25 @@
+service: prismic-circleci-webhook
+plugins:
+  - serverless-dotenv-plugin
+
+custom:
+  dotenv:
+    include:
+      - CIRCLE_CI_TOKEN
+      - DEFAULT_BRANCH
+      - VCS
+      - REPO_OWNER
+      - REPO_NAME
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  trigger:
+    handler: handler.trigger
+    events:
+      - http:
+          method: post
+          path: trigger
+          cors: true
