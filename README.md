@@ -22,6 +22,14 @@ cp example.env .env
 
 **Serverless User**
 
+If you already have programmatic access just export the AWS_PROFILE to your shell and deploy
+
+```sh
+export AWS_PROFILE=<one-of-your-configured-profiles>
+```
+
+Alternatively:
+
 1. Sign Up for an AWS account or log in if you already have one.
 1. In the AWS search bar, search for "IAM".
 1. On the IAM page, click on "Users" on the sidebar, then the "Add user" button.
