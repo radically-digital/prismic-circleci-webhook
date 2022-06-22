@@ -16,7 +16,7 @@
     "xo": "^0.28.0"
   },
   "dependencies": {
-    "got": "^10.6.0",
+    "got": "^11.8.5",
     "serverless-dotenv-plugin": "^2.3.2"
   }
 }
